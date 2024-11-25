@@ -41,11 +41,11 @@ frontend niyonkuru11-frontend
         default_backend niyonkuru11-backend
 
 frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/niyonkuru11.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.niyonkuru11.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend niyonkuru11-backend
 
 backend niyonkuru11-backend
         balance roundrobin
-        server 151666-web-01 54.160.254.52:80 check
-        server 151666-web-02 54.90.137.130:80 check
+        server 6361-web-01 54.160.254.52:80 check
+        server 6361-web-02 54.90.137.130:80 check
